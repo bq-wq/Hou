@@ -84,7 +84,7 @@ public class SysController {
 
         List<String> list = userService.queryByUsername(username);
 
-        System.out.println(list);
+       // System.out.println(list);
 
         return R.ok().put("menuList", list);
     }
