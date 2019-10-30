@@ -189,6 +189,9 @@
       <find>shir</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -257,9 +260,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="245" />
-    <option name="y" value="25" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-62" />
+    <option name="y" value="136" />
     <option name="width" value="1386" />
     <option name="height" value="769" />
   </component>
@@ -317,6 +320,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -619,7 +623,7 @@
       <updated>1572317264817</updated>
       <workItem from="1572317270706" duration="3623000" />
       <workItem from="1572320995769" duration="23907000" />
-      <workItem from="1572394246855" duration="2183000" />
+      <workItem from="1572394246855" duration="2530000" />
     </task>
     <servers />
   </component>
@@ -635,10 +639,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29713000" />
+    <option name="totallyTimeSpent" value="30060000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="245" y="25" width="1386" height="769" extended-state="0" />
+    <frame x="-62" y="136" width="1386" height="769" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -652,7 +656,7 @@
       <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22385621" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22422259" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
