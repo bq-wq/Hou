@@ -1,6 +1,8 @@
 package com.qf.dao;
 
+import com.qf.pojo.Menu;
 import com.qf.pojo.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -18,4 +20,8 @@ public interface UserDAO {
 
        //查询所有权限
     List<String> queryByUsername(String username);
+
+    List<Menu> queryAllPermissionByUsername(String username);
+
+    List<Menu> queryMenuOneChild(@Param("menu_id") Integer menu_id,@Param("username") String username);
 }

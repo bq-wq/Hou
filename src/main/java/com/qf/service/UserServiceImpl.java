@@ -1,6 +1,7 @@
 package com.qf.service;
 
 import com.qf.dao.UserDAO;
+import com.qf.pojo.Menu;
 import com.qf.pojo.User;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,20 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<String> queryByUsername(String username) {
-        return userDAO.queryByUsername(username);
+        List<String> list =  userDAO.queryByUsername(username);
+        System.out.println("dao1"+list);
+        return list;
+    }
+
+    @Override
+    public List<Menu> queryAllPermissionByUsername(String username) {
+        List<Menu> list =  userDAO.queryAllPermissionByUsername(username);
+        System.out.println("dao2:"+list);
+        return list;
+    }
+
+    @Override
+    public List<Menu> queryMenuOneChild(Integer menu_id, String username) {
+        return userDAO.queryMenuOneChild(menu_id,username);
     }
 }

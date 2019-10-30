@@ -34,14 +34,14 @@ public class MyRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken Token) throws AuthenticationException {
         //获取用户登入发来的用户名
         String username = (String) Token.getPrincipal();
-        System.out.println("-------"+username);
+       // System.out.println("-------"+username);
 
         User user  = userService.queryUsername(username);
         //判断用户信息是否为空
         if(user==null){
             return null;
         }
-        System.out.println("用户信息："+user);
+       // System.out.println("用户信息："+user);
         //将用户信息封装在  AuthenticationInfo中
      /*   return new SimpleAuthenticationInfo(user.getUsername(),//数据库中用户名
                                      user.getPassword(), //数据库中的密码

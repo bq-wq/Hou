@@ -1,5 +1,6 @@
 package com.qf.controller;
 
+import com.qf.pojo.Menu;
 import com.qf.pojo.User;
 import com.qf.pojo.UserVo;
 import com.qf.service.UserService;
@@ -41,14 +42,14 @@ public class SysController {
 //        Captcha1.generateCaptcha(req,res);
 
         Integer captcha =(Integer) session.getAttribute("captcha");
-        System.out.println("系统生成："+captcha);
-        System.out.println("前端传来："+user.getCaptcha());
-        System.out.println("登入前边传来参数："+user);
+        //System.out.println("系统生成："+captcha);
+        //System.out.println("前端传来："+user.getCaptcha());
+        //System.out.println("登入前边传来参数："+user);
         //获取subject 调用login
         Subject subject = SecurityUtils.getSubject();
         //创建 登入 delingpai
         UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(),user.getPassword());
-        System.out.println(token);
+      //  System.out.println(token);
 
 
         if(captcha!=Integer.parseInt(user.getCaptcha()) ){
@@ -82,16 +83,28 @@ public class SysController {
         Object username1 = SecurityUtils.getSubject().getPrincipal();
         String username = (String) username1;
 
-        List<String> list = userService.queryByUsername(username);
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        List<String> perms =  userService.queryByUsername(username);
+        System.out.println("查询用户所有权限："+perms);
+            //根据用户信息查询用户顶级菜单
+        List<Menu> list =  userService.queryAllPermissionByUsername(username);
+        System.out.println("查询用户顶级菜单："+list);
+        //封装一级权限
+        for (Menu menu:list){
+            List<Menu> menus = userService.queryMenuOneChild(menu.getMenu_id(),username);
+            System.out.println("查询一级权限:"+menus);
+                menu.setList(menus);
 
+        }
+        System.out.println("list"+list);
 
-        return R.ok().put("menuList", list);
+        return R.ok().put("menuList", list).put("permissions", perms);
     }
 
+
+   /* public R logout(){
+
+
+    }*/
 
 
 }

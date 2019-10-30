@@ -1,5 +1,6 @@
 package com.qf.service;
 
+import com.qf.pojo.Menu;
 import com.qf.pojo.User;
 
 import java.util.List;
@@ -13,4 +14,8 @@ public interface UserService {
     User queryUsername(String username);
 
     List<String> queryByUsername(String username);
+
+    List<Menu> queryAllPermissionByUsername(String username);
+
+    List<Menu> queryMenuOneChild(Integer menu_id, String username);
 }
