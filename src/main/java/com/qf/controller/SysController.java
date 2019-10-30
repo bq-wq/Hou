@@ -83,7 +83,9 @@ public class SysController {
         String username = (String) username1;
 
         List<String> list = userService.queryByUsername(username);
-
+        System.out.println();
+        System.out.println();
+        System.out.println();
 
 
         return R.ok().put("menuList", list);
